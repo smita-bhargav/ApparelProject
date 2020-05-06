@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="Regression1"
+           tests="3"
+           failures="0"
+           errors="0"
+           skipped="0"
+           time="78.524">
+  <properties />
+  
+  
+            <testcase name="signIn" time="10.427" classname="com.project.testcase.ApparelPlacOrder" />
+                <testcase name="searchApparel" time="63.813" classname="com.project.testcase.ApparelPlacOrder" />
+                <testcase name="SignOut" time="4.284" classname="com.project.testcase.ApparelPlacOrder" />
+      
+</testsuite>

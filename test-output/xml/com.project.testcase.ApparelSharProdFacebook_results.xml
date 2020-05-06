@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="Regression1"
+           tests="4"
+           failures="0"
+           errors="0"
+           skipped="0"
+           time="37.442">
+  <properties />
+  
+  
+            <testcase name="lgnFacebookApparel" time="17.306" classname="com.project.testcase.ApparelSharProdFacebook" />
+                <testcase name="searchApparel" time="9.811" classname="com.project.testcase.ApparelSharProdFacebook" />
+                <testcase name="SignOut" time="3.409" classname="com.project.testcase.ApparelSharProdFacebook" />
+                <testcase name="signIn" time="6.916" classname="com.project.testcase.ApparelSharProdFacebook" />
+      
+</testsuite>

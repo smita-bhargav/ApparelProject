@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="TestChrome"
+           tests="3"
+           failures="0"
+           errors="0"
+           skipped="0"
+           time="116.383">
+  <properties />
+  
+  
+            <testcase name="signIn" time="9.962" classname="com.project.testcase.ApparelSignIn" />
+                <testcase name="signIn" time="55.212" classname="com.project.testcase.ApparelSignIn" />
+                <testcase name="signIn" time="51.209" classname="com.project.testcase.ApparelSignIn" />
+      
+</testsuite>

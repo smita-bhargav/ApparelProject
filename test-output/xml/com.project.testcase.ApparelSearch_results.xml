@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="TestChrome"
+           tests="4"
+           failures="0"
+           errors="0"
+           skipped="0"
+           time="28.888">
+  <properties />
+  
+  
+            <testcase name="SignOut" time="5.289" classname="com.project.testcase.ApparelSearch" />
+                <testcase name="searchApparel" time="6.465" classname="com.project.testcase.ApparelSearch" />
+                <testcase name="searchApparel" time="6.303" classname="com.project.testcase.ApparelSearch" />
+                <testcase name="signIn" time="10.831" classname="com.project.testcase.ApparelSearch" />
+      
+</testsuite>
