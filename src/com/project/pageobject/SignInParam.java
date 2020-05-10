@@ -10,30 +10,33 @@ import org.openqa.selenium.support.PageFactory;
 
 import com.project.objectMap.ObjectRepos;
 
+import lombok.Getter;
+import lombok.Setter;
+
 public class SignInParam {
 	@CacheLookup
-	@FindBy(id=ObjectRepos.ApparelPage.apparel_mail_id)
-	private WebElement emailTextbox;
+	@FindBy(id=ObjectRepos.ApparelPage.APPAREL_MAIL_ID)
+	private @Getter WebElement emailTextbox;
 
 	@CacheLookup
-	@FindBy(id=ObjectRepos.ApparelPage.apparel_pwd_id)
-	private WebElement pwdTextbox;
+	@FindBy(id=ObjectRepos.ApparelPage.APPAREL_PWD_ID)
+	private @Getter WebElement pwdTextbox;
 
 	@CacheLookup
-	@FindBy(className=ObjectRepos.ApparelPage.apparel_lgnclk_class)
-	private WebElement lgnClickbtn;
+	@FindBy(className=ObjectRepos.ApparelPage.APPAREL_LGNCLK_CLASS)
+	private @Getter @Setter WebElement lgnClickbtn;
 	
 	@CacheLookup
-	@FindBy(xpath=ObjectRepos.ApparelPage.apparel_sbmt_Xpath)
-	private WebElement sbmtBtn;
+	@FindBy(xpath=ObjectRepos.ApparelPage.APPAREL_SBMT_XPATH)
+	private @Getter @Setter WebElement sbmtBtn;
 	
 	@CacheLookup
-	@FindBy(xpath=ObjectRepos.ApparelPage.apparel_error_Xpath)
-	private List<WebElement> errorAlrt;
+	@FindBy(xpath=ObjectRepos.ApparelPage.APPAREL_ERROR_XPATH)
+	private @Getter @Setter List<WebElement> errorAlrt;
 	
 	@CacheLookup
-	@FindBy(xpath=ObjectRepos.ApparelPage.apparel_logout_Xpath)
-	private WebElement logoutClickbtn;
+	@FindBy(xpath=ObjectRepos.ApparelPage.APPAREL_LOGOUT_XPATH)
+	private @Getter @Setter WebElement logoutClickbtn;
 	
 	
 	WebDriver driver; //local to this page
@@ -43,55 +46,22 @@ public class SignInParam {
 		PageFactory.initElements(driver, this);
 	}
 	
-	public WebElement getLogoutClickbtn() {
-		return logoutClickbtn;
-	}
-	public void setLogoutClickbtn(WebElement logoutClickbtn) {
-		this.logoutClickbtn = logoutClickbtn;
-	}
-	public List<WebElement> getErrorAlrt() {
-		return errorAlrt;
-	}
-	public void setErrorAlrt(List<WebElement> errorAlrt) {
-		this.errorAlrt = errorAlrt;
-	}
-	public WebElement getSbmtBtn() {
-		return sbmtBtn;
-	}
-	public void setSbmtBtn(WebElement sbmtBtn) {
-		this.sbmtBtn = sbmtBtn;
-	}
-	public WebElement getLgnClickbtn() {
-		return lgnClickbtn;
-	}
-	public void setLgnClickbtn(WebElement lgnClickbtn) {
-		this.lgnClickbtn = lgnClickbtn;
-	}
 	
-	
-	public void setEmail(String emal){
+	public void setEmailTextbox(String emal){
 		emailTextbox.clear();
 		emailTextbox.sendKeys(emal);
 	}
 	
-	public String getEmail(){
 		
-		return emailTextbox.getAttribute("value");
-	}
-	
-	public void setPwd(String pwd){
+	public void setpwdTextbox(String pwd){
 		pwdTextbox.clear();
 		pwdTextbox.sendKeys(pwd);
 	}
 	
-	public String getPwd(){
-   
-		return pwdTextbox.getAttribute("value");
-	}
 	public void SignInDetails(String email, String passwd){
 		
-		setEmail(email);
-		setPwd(passwd);
+		setEmailTextbox(email);
+		setpwdTextbox(passwd);
 		
 	}
 

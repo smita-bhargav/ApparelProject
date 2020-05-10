@@ -8,88 +8,72 @@ import org.openqa.selenium.support.PageFactory;
 
 import com.project.objectMap.ObjectRepos;
 
-public class ShareProdParam {
-	@CacheLookup
-	@FindBy(id=ObjectRepos.ApparelPage.apparel_mail_id)
-	private WebElement emailTextbox;
+import lombok.Getter;
+import lombok.Setter;
 
-	@CacheLookup
-	@FindBy(id=ObjectRepos.ApparelPage.apparel_pwd_id)
-	private WebElement pwdTextbox;
+public class ShareProdParam {
 	
 	@CacheLookup
-	@FindBy(className=ObjectRepos.ApparelPage.apparel_lgnclk_class)
-	private WebElement lgnClickbtn;
+	@FindBy(id=ObjectRepos.ApparelPage.APPAREL_SR_SEARCHTXT_ID)
+	private @Getter WebElement searchTextbox;
 	
 	@CacheLookup
-	@FindBy(xpath=ObjectRepos.ApparelPage.apparel_sbmt_Xpath)
-	private WebElement sbmtBtn;
+	@FindBy(xpath=ObjectRepos.ApparelPage.APPAREL_CR_SERCHSBMT_XPATH)
+	private @Getter @Setter WebElement searchSbmtBtn;
 	
 	@CacheLookup
-	@FindBy(id=ObjectRepos.ApparelPage.apparel_sr_serchtxt_id)
-	private WebElement searchTextbox;
-	
-	@CacheLookup
-	@FindBy(xpath=ObjectRepos.ApparelPage.apparel_sr_serchsbmt_Xpath)
-	private WebElement searchSbmtBtn;
-	
-	@CacheLookup
-	@FindBy(xpath=ObjectRepos.ApparelPage.apparel_rw_reviewDress1_Xpath)
-	private WebElement reviewdress1;
+	@FindBy(xpath=ObjectRepos.ApparelPage.APPAREL_RW_REVIEWDRESS1_XPATH)
+	private  @Getter @Setter  WebElement reviewdress1;
 	
 	
 	@CacheLookup
-	@FindBy(xpath=ObjectRepos.ApparelPage.apparel_rw_reviewDress2_Xpath)
-	private WebElement reviewdress2;
+	@FindBy(xpath=ObjectRepos.ApparelPage.APPAREL_RW_REVIEWDRESS2_XPATH)
+	private  @Getter @Setter  WebElement reviewdress2;
 	
 	/*****Pin Interest****/
 	@CacheLookup
-	@FindBy(xpath=ObjectRepos.ApparelPage.apparel_shr_pin_Xpath)
-	private WebElement pinInterestclk;
+	@FindBy(xpath=ObjectRepos.ApparelPage.APPAREL_SHR_PIN_XPATH)
+	private  @Getter @Setter WebElement pinInterestclk;
 	
 	@CacheLookup
-	@FindBy(xpath=ObjectRepos.ApparelPage.apparel_shr_pinlgnid_Xpath)
-	private WebElement pinLgnId;
+	@FindBy(xpath=ObjectRepos.ApparelPage.APPAREL_SHR_PINLGNID_XPATH)
+	private @Getter WebElement pinLgnId;
 	
 	@CacheLookup
-	@FindBy(xpath=ObjectRepos.ApparelPage.apparel_shr_pinlgnpsswd_Xpath)
-	private WebElement pinLgnPswd;
+	@FindBy(xpath=ObjectRepos.ApparelPage.APPAREL_SHR_PINLGNPASSWD_XPATH)
+	private @Getter WebElement pinLgnPswd;
 	
 	@CacheLookup
-	@FindBy(xpath=ObjectRepos.ApparelPage.apparel_shr_pinlgnsbmt_Xpath)
-	private WebElement pinLgnSbtmt;
+	@FindBy(xpath=ObjectRepos.ApparelPage.APPAREL_SHR_PINLGNSBMT_XPATH)
+	private  @Getter @Setter WebElement pinLgnSbtmt;
 	
 	/*****Facebook****/
 	@CacheLookup
-	@FindBy(xpath=ObjectRepos.ApparelPage.apparel_shr_facebook_Xpath)
-	private WebElement facebookClk;
+	@FindBy(xpath=ObjectRepos.ApparelPage.APPAREL_SHR_FACEBOOK_XPATH)
+	private  @Getter @Setter  WebElement facebookClk;
 	
 	@CacheLookup
-	@FindBy(xpath=ObjectRepos.ApparelPage.apparel_shr_facebklgn_Xpath)
-	private WebElement facebookLgnId;
+	@FindBy(xpath=ObjectRepos.ApparelPage.APPAREL_SHR_FACEBKLGN_XPATH)
+	private @Getter WebElement facebookLgnId;
 	
 	@CacheLookup
-	@FindBy(xpath=ObjectRepos.ApparelPage.apparel_shr_facebkpswrd_Xpath)
-	private WebElement facebookLgnPswrd;
+	@FindBy(xpath=ObjectRepos.ApparelPage.APPAREL_SHR_FACEBKPSWRD_XPATH)
+	private @Getter WebElement facebookLgnPswrd;
 	
 	@CacheLookup
-	@FindBy(xpath=ObjectRepos.ApparelPage.apparel_shr_facebkSbmt_Xpath)
-	private WebElement facebookSbmit;
+	@FindBy(xpath=ObjectRepos.ApparelPage.APPAREL_SHR_FACEBKSBMT_XPATH)
+	private @Getter @Setter WebElement facebookSbmit;
 	
 	
 	@CacheLookup
-	@FindBy(xpath=ObjectRepos.ApparelPage.apparel_shr_facebkCancel_Xpath)
-	private WebElement facebookCancel;
+	@FindBy(xpath=ObjectRepos.ApparelPage.APPAREL_SHR_FACEBHKCANCEL_XPATH)
+	private @Getter @Setter WebElement facebookCancel;
 	/******Google Share******/
 	
 	@CacheLookup
-	@FindBy(xpath=ObjectRepos.ApparelPage.apparel_shr_google_Xpath)
-	private WebElement googleShareClk;
+	@FindBy(xpath=ObjectRepos.ApparelPage.APPAREL_SHR_GOOGLE_XPATH)
+	private @Getter @Setter WebElement googleShareClk;
 
-	@CacheLookup
-	@FindBy(xpath=ObjectRepos.ApparelPage.apparel_logout_Xpath)
-	private WebElement logoutClickbtn;
-	
 	
 	WebDriver driver; //local to this page
 	public ShareProdParam(WebDriver driver) {
@@ -98,178 +82,33 @@ public class ShareProdParam {
 		PageFactory.initElements(driver, this);
 	}
 	
-	public WebElement getGoogleShareClk() {
-		return googleShareClk;
-	}
-
-	public void setGoogleShareClk(WebElement googleShareClk) {
-		this.googleShareClk = googleShareClk;
-	}
-	
-	public WebElement getLogoutClickbtn() {
-		return logoutClickbtn;
-	}
-
-	public void setLogoutClickbtn(WebElement logoutClickbtn) {
-		this.logoutClickbtn = logoutClickbtn;
-	}
-	
-	public WebElement getFacebookClk() {
-		return facebookClk;
-	}
-
-
-	public void setFacebookClk(WebElement facebookClk) {
-		this.facebookClk = facebookClk;
-	}
-
-
-	public WebElement getFacebookSbmit() {
-		return facebookSbmit;
-	}
-
-
-	public void setFacebookSbmit(WebElement facebookSbmit) {
-		this.facebookSbmit = facebookSbmit;
-	}
-
-
-	public WebElement getFacebookCancel() {
-		return facebookCancel;
-	}
-
-
-	public void setFacebookCancel(WebElement facebookCancel) {
-		this.facebookCancel = facebookCancel;
-	}
 	public void setfacebookLgnId(String lgn){
 		facebookLgnId.clear();
 		facebookLgnId.sendKeys(lgn);
 	}
 	
-	public String getfacebookLgnId(){
-		
-		return facebookLgnId.getAttribute("value");
-	}
 	
 	public void setfacebookPsswrd(String pwd){
 		facebookLgnPswrd.clear();
 		facebookLgnPswrd.sendKeys(pwd);
 	}
 	
-	public String getfacebookPsswrd(){
-		
-		return facebookLgnPswrd.getAttribute("value");
-	}
-
+	
 	public void setpinLgnId(String lgn){
 		pinLgnId.clear();
 		pinLgnId.sendKeys(lgn);
 	}
 	
-	public String getpinLgnId(){
-		
-		return pinLgnId.getAttribute("value");
-	}
 	public void setpinLgnPswd(String pwd){
 		pinLgnPswd.clear();
 		pinLgnPswd.sendKeys(pwd);
 	}
-	
-	public String getpinLgnPswd(){
-		
-		return pinLgnPswd.getAttribute("value");
-	}
-
-	public WebElement getPinLgnSbtmt() {
-		return pinLgnSbtmt;
-	}
-
-	public void setPinLgnSbtmt(WebElement pinLgnSbtmt) {
-		this.pinLgnSbtmt = pinLgnSbtmt;
-	}
-
-	
-	public WebElement getReviewdress1() {
-		return reviewdress1;
-	}
-
-	public void setReviewdress1(WebElement reviewdress1) {
-		this.reviewdress1 = reviewdress1;
-	}
-
-	public WebElement getReviewdress2() {
-		return reviewdress2;
-	}
-
-	public void setReviewdress2(WebElement reviewdress2) {
-		this.reviewdress2 = reviewdress2;
-	}
-
 	public void setSearchBox(String srch){
 		searchTextbox.clear();
 		searchTextbox.sendKeys(srch);
 	}
-	
-	public String getSearchBox(){
+	public void SearchDetail(String searchapprl,String clickdress){
 		
-		return searchTextbox.getAttribute("value");
-	}
-	public WebElement getPinInterestClk() {
-		return pinInterestclk;
-	}
-	public void setPinInterestClk(WebElement pinInterest) {
-		this.pinInterestclk = pinInterest;
-	}
-
-	
-	public WebElement getSearchSbmtBtn() {
-		return searchSbmtBtn;
-	}
-
-	public void setSearchSbmtBtn(WebElement searchSbmtBtn) {
-		this.searchSbmtBtn = searchSbmtBtn;
-	}
-	public void setEmail(String emal){
-		emailTextbox.clear();
-		emailTextbox.sendKeys(emal);
-	}
-	
-	public String getEmail(){
-		
-		return emailTextbox.getAttribute("value");
-	}
-	
-	public void setPwd(String pwd){
-		pwdTextbox.clear();
-		pwdTextbox.sendKeys(pwd);
-	}
-	
-	public String getPwd(){
-   
-		return pwdTextbox.getAttribute("value");
-	}
-	public WebElement getSbmtBtn() {
-		return sbmtBtn;
-	}
-	public void setSbmtBtn(WebElement sbmtBtn) {
-		this.sbmtBtn = sbmtBtn;
-	}
-	public WebElement getLgnClickbtn() {
-		return lgnClickbtn;
-	}
-	public void setLgnClickbtn(WebElement lgnClickbtn) {
-		this.lgnClickbtn = lgnClickbtn;
-	}
-	
-	 public void SignInDetails(String email, String passwd){
-		   
-			setEmail(email);
-			setPwd(passwd);
-			
-	}
-	 public void SearchDetail(String searchapprl,String clickdress){
-		   //System.out.println(searchapprl+ " clickdress  : "+clickdress);
 		   setSearchBox(searchapprl);
 	  }
 	 

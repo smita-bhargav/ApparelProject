@@ -12,126 +12,100 @@ import org.openqa.selenium.support.ui.Select;
 
 import com.project.objectMap.ObjectRepos;
 
+import lombok.Getter;
+import lombok.Setter;
+
 public class UserCreateParam {
 
 JavascriptExecutor js ;
 	
 	@CacheLookup
 	// @FindBy(id="email")
-	@FindBy(id=ObjectRepos.ApparelPage.apparel_cr_email_id)
-	private WebElement emailTextbox;
+	@FindBy(id=ObjectRepos.ApparelPage.APPAREL_CR_EMAIL_ID)
+	private @Getter @Setter WebElement emailTextbox;
 	
 	@CacheLookup
-	@FindBy(className=ObjectRepos.ApparelPage.apparel_lgnclk_class)
-	private WebElement lgnClickbtn;
+	@FindBy(className=ObjectRepos.ApparelPage.APPAREL_LGNCLK_CLASS)
+	private  @Getter @Setter WebElement lgnClickbtn;
 	
 	@CacheLookup
-	@FindBy(xpath=ObjectRepos.ApparelPage.apparel_sbmt_Xpath)
-	private WebElement sbmtBtn;
+	@FindBy(xpath=ObjectRepos.ApparelPage.APPAREL_SBMT_XPATH)
+	private  @Getter @Setter WebElement sbmtBtn;
 	
 	@CacheLookup
-	@FindBy(xpath=ObjectRepos.ApparelPage.apparel_logout_Xpath)
-	private WebElement logoutClickbtn;
+	@FindBy(xpath=ObjectRepos.ApparelPage.APPAREL_LOGOUT_XPATH)
+	private  @Getter @Setter WebElement logoutClickbtn;
 	
-	@FindBy(xpath=ObjectRepos.ApparelPage.apparel_cr_create_accnt_xpath)
-	private WebElement createAcntSbmt;
-	
-	
-	@FindBy(name=ObjectRepos.ApparelPage.apparel_cr_titleList_name)
-	private List<WebElement>  titleRadiobtn;
+	@FindBy(xpath=ObjectRepos.ApparelPage.APPAREL_CR_CREATE_ACCNT_XPATH)
+	private @Getter @Setter WebElement createAcntSbmt;
 	
 	
-	@FindBy(id=ObjectRepos.ApparelPage.apparel_cr_custfirst_id)
-	private WebElement custfirstTextbox;
-	
-	@FindBy(id=ObjectRepos.ApparelPage.apparel_cr_custlast_id)
-	private WebElement custlastTextbox;
-	
-	@FindBy(id=ObjectRepos.ApparelPage.apparel_cr_pwd_id)
-	private WebElement paswrdTextbox;
-	
-	@FindBy(id=ObjectRepos.ApparelPage.apparel_cr_days_id)
-	private WebElement dayDrpdwn;
-	
-	@FindBy(id=ObjectRepos.ApparelPage.apparel_cr_months_id)
-	private WebElement mnthDrpdwn;
-	
-	@FindBy(id=ObjectRepos.ApparelPage.apparel_cr_years_id)
-	private WebElement yearDrpdwn;
-	
-	@FindBy(id=ObjectRepos.ApparelPage.apparel_cr_firstname_id)
-	private WebElement firstnameTextbox;
-	
-	@FindBy(id=ObjectRepos.ApparelPage.apparel_cr_lastname_id)
-	private WebElement lastnameTextbox;
-	
-	@FindBy(id=ObjectRepos.ApparelPage.apparel_cr_addres_id)
-	private WebElement addressTextbox;
-	
-	@FindBy(id=ObjectRepos.ApparelPage.apparel_cr_addres2_id)
-	private WebElement address2Textbox;
-	
-	@FindBy(id=ObjectRepos.ApparelPage.apparel_cr_cmpny_id)
-	private WebElement cmpnyTextbox;
-	
-	@FindBy(id=ObjectRepos.ApparelPage.apparel_cr_city_id)
-	private WebElement cityTextbox;
-	
-	@FindBy(id=ObjectRepos.ApparelPage.apparel_cr_state_id)
-	private WebElement stateDrpdwn;
-	
-	@FindBy(id=ObjectRepos.ApparelPage.apparel_cr_postcode_id)
-	private WebElement postcodeTextbox;
-	
-	@FindBy(id=ObjectRepos.ApparelPage.apparel_cr_country_id)
-	private WebElement cntryDrpdwn;
-	
-	@FindBy(id=ObjectRepos.ApparelPage.apparel_cr_info_id)
-	private WebElement otherInfoTextArea;
-	
-	@FindBy(id=ObjectRepos.ApparelPage.apparel_cr_phone_id)
-	private WebElement phoneTextbox;
-	
-	@FindBy(id=ObjectRepos.ApparelPage.apparel_cr_mobile_id)
-	private WebElement mobileTextbox;
+	@FindBy(name=ObjectRepos.ApparelPage.APPAREL_CR_TITLELIST_NAME)
+	private @Getter List<WebElement>  titleRadiobtn;
 	
 	
-	@FindBy(xpath=ObjectRepos.ApparelPage.apparel_cr_alias_Xpath)
-	private WebElement aliasTextbox;
+	@FindBy(id=ObjectRepos.ApparelPage.APPAREL_CR_CUSTFIRST_ID)
+	private @Getter WebElement custfirstTextbox;
 	
-	@FindBy(xpath=ObjectRepos.ApparelPage.apparel_cr_register_Xpath)
-	private WebElement registerSbmt;
+	@FindBy(id=ObjectRepos.ApparelPage.APPAREL_CR_CUSTLAST_ID)
+	private @Getter WebElement custlastTextbox;
+	
+	@FindBy(id=ObjectRepos.ApparelPage.APPAREL_CR_PWD_ID)
+	private @Getter WebElement paswrdTextbox;
+	
+	@FindBy(id=ObjectRepos.ApparelPage.APPAREL_CR_DAYS_ID)
+	private @Getter WebElement dayDrpdwn;
+	
+	@FindBy(id=ObjectRepos.ApparelPage.APPAREL_CR_MONTHS_ID)
+	private @Getter WebElement mnthDrpdwn;
+	
+	@FindBy(id=ObjectRepos.ApparelPage.APPAREL_CR_YEARS_ID)
+	private @Getter WebElement yearDrpdwn;
+	
+	@FindBy(id=ObjectRepos.ApparelPage.APPREL_CR_FIRSTNAME_ID)
+	private @Getter WebElement firstnameTextbox;
+	
+	@FindBy(id=ObjectRepos.ApparelPage.APPAREL_CR_LASTNAME_ID)
+	private @Getter WebElement lastnameTextbox;
+	
+	@FindBy(id=ObjectRepos.ApparelPage.APPAREL_CR_ADRESS_ID)
+	private @Getter WebElement addressTextbox;
+	
+	@FindBy(id=ObjectRepos.ApparelPage.APPAREL_CR_ADRESS2_ID)
+	private @Getter WebElement address2Textbox;
+	
+	@FindBy(id=ObjectRepos.ApparelPage.APPAREL_CR_CMPNY_ID)
+	private @Getter WebElement cmpnyTextbox;
+	
+	@FindBy(id=ObjectRepos.ApparelPage.APPAREL_CR_CITY_ID)
+	private @Getter WebElement cityTextbox;
+	
+	@FindBy(id=ObjectRepos.ApparelPage.APPAREL_CR_STATE_ID)
+	private @Getter WebElement stateDrpdwn;
+	
+	@FindBy(id=ObjectRepos.ApparelPage.APPAREL_CR_POSTCODE_ID)
+	private @Getter WebElement postcodeTextbox;
+	
+	@FindBy(id=ObjectRepos.ApparelPage.APPAREL_CR_COUNTRY_ID)
+	private @Getter WebElement cntryDrpdwn;
+	
+	@FindBy(id=ObjectRepos.ApparelPage.APPAREL_CR_INFO_ID)
+	private @Getter WebElement otherInfoTextArea;
+	
+	@FindBy(id=ObjectRepos.ApparelPage.APPAREL_CR_PHN_ID)
+	private @Getter WebElement phoneTextbox;
+	
+	@FindBy(id=ObjectRepos.ApparelPage.APPAREL_CR_MOBILE_ID)
+	private @Getter WebElement mobileTextbox;
+	
+	
+	@FindBy(xpath=ObjectRepos.ApparelPage.APPREL_CR_ALIAS_XPATH)
+	private @Getter WebElement aliasTextbox;
+	
+	@FindBy(xpath=ObjectRepos.ApparelPage.APPAREL_CR_REGISTER_XPATH)
+	private @Getter @Setter WebElement registerSbmt;
 	 
-	public WebElement getCreateAcntSbmt() {
-		return createAcntSbmt;
-	}
-	public void setCreateAcntSbmt(WebElement createAcntSbmt) {
-		this.createAcntSbmt = createAcntSbmt;
-	}
-	public WebElement getLgnClickbtn() {
-		return lgnClickbtn;
-	}
-	public void setLgnClickbtn(WebElement lgnClickbtn) {
-		this.lgnClickbtn = lgnClickbtn;
-	}
-	public WebElement getRegisterSbmt() {
-		return registerSbmt;
-	}
-	public void setRegisterSbmt(WebElement registerSbmt) {
-		this.registerSbmt = registerSbmt;
-	}
-	public WebElement getLogoutClickbtn() {
-		return logoutClickbtn;
-	}
-	public void setLogoutClickbtn(WebElement logoutClickbtn) {
-		this.logoutClickbtn = logoutClickbtn;
-	}
-	public WebElement getSbmtBtn() {
-		return sbmtBtn;
-	}
-	public void setSbmtBtn(WebElement sbmtBtn) {
-		this.sbmtBtn = sbmtBtn;
-	}
+	
 	WebDriver driver; //local to this page
 	public UserCreateParam(WebDriver driver) {
 		this.driver = driver; //this drive is passed from my testcase - getting assigned to my local driver
@@ -143,11 +117,6 @@ JavascriptExecutor js ;
 		emailTextbox.sendKeys(email);
 	}
 	
-	public String getEmail(){
-   
-		return emailTextbox.getAttribute("value");
-	}
-
 	
 	
 	public void setCustFirstName(String custfirstnm){
@@ -155,176 +124,97 @@ JavascriptExecutor js ;
 		custfirstTextbox.sendKeys(custfirstnm);
 	}
 	
-	public String getCustFirstName(){
-   
-		return custfirstTextbox.getAttribute("value");
-	}
-	public void setCustLastName(String custlastnm){
+	public void setcustlastTextbox(String custlastnm){
 		custlastTextbox.clear();
 		custlastTextbox.sendKeys(custlastnm);
 	}
 	
-	public String getCustLastName(){
-   
-		return custlastTextbox.getAttribute("value");
-	}
-	public void setPwd(String pwd){
+	public void setpaswrdTextbox(String pwd){
 		paswrdTextbox.clear();
 		paswrdTextbox.sendKeys(pwd);
 	}
 	
-	public String getPwd(){
-   
-		return paswrdTextbox.getAttribute("value");
-	}
-	public void setDay(String day){
+	public void setdayDrpdwn(String day){
 		dayDrpdwn.clear();
 		dayDrpdwn.sendKeys(day);
 	}
 	
-	public String getDay(){
-   
-		return dayDrpdwn.getAttribute("value");
-	}
-	public void setMnth(String mnth){
+	public void setmnthDrpdwn(String mnth){
 		mnthDrpdwn.clear();
 		mnthDrpdwn.sendKeys(mnth);
 	}
 	
-	public String getMnth(){
-   
-		return mnthDrpdwn.getAttribute("value");
-	}
-	public void setYear(String yr){
+	public void setyearDrpdwn(String yr){
 		yearDrpdwn.clear();
 		yearDrpdwn.sendKeys(yr);
 	}
 	
-	public String getYear(){
-   
-		return yearDrpdwn.getAttribute("value");
-	}
-	public void setFrstName(String fname){
+	public void setfirstnameTextbox(String fname){
 		firstnameTextbox.clear();
 		firstnameTextbox.sendKeys(fname);
 	}
 	
-	public String getFrstName(){
-   
-		return firstnameTextbox.getAttribute("value");
-	}
-	public void setLastName(String lname){
+	public void setlastnameTextbox(String lname){
 		lastnameTextbox.clear();
 		lastnameTextbox.sendKeys(lname);
 	}
 	
-	public String getLastName(){
-   
-		return lastnameTextbox.getAttribute("value");
-	}
-	public void setAddress(String address){
+	public void setaddressTextbox(String address){
 		addressTextbox.clear();
 		addressTextbox.sendKeys(address);
 	}
 	
-	public String getAddress(){
-   
-		return addressTextbox.getAttribute("value");
-	}
-	public void setAddress2(String address2){
+	public void setaddress2Textbox(String address2){
 		address2Textbox.clear();
 		address2Textbox.sendKeys(address2);
 	}
 	
-	public String getAddress2(){
-   
-		return address2Textbox.getAttribute("value");
-	}
-	public void setCmpny(String cmpny){
+	public void setcmpnyTextbox(String cmpny){
 		cmpnyTextbox.clear();
 		cmpnyTextbox.sendKeys(cmpny);
 	}
 	
-	public String getCmpny(){
-   
-		return cmpnyTextbox.getAttribute("value");
-	}
-	public void setCity(String city){
+	public void setcityTextbox(String city){
 		cityTextbox.clear();
 		cityTextbox.sendKeys(city);
 	}
 	
-	public String getCity(){
-   
-		return cityTextbox.getAttribute("value");
-	}
-	public void setState(String state){
+	public void setstateDrpdwn(String state){
 		stateDrpdwn.clear();
 		stateDrpdwn.sendKeys(state);
 	}
 	
-	public String getState(){
-   
-		return stateDrpdwn.getAttribute("value");
-	}
-	public void setPstCode(String pcode){
+	public void setpostcodeTextbox(String pcode){
 		postcodeTextbox.clear();
 		postcodeTextbox.sendKeys(pcode);
 	}
 	
-	public String getPstCode(){
-   
-		return postcodeTextbox.getAttribute("value");
-	}
-	public void setCntry(String cntry){
+	public void setcntryDrpdwn(String cntry){
 		cntryDrpdwn.clear();
 		cntryDrpdwn.sendKeys(cntry);
 	}
 	
-	public String getCntry(){
-   
-		return cntryDrpdwn.getAttribute("value");
-	}
-	public void setOtherInfo(String info){
+	public void setotherInfoTextArea(String info){
 		otherInfoTextArea.clear();
 		otherInfoTextArea.sendKeys(info);
 	}
 	
-	public String getOtherInfo(){
-   
-		return otherInfoTextArea.getAttribute("value");
-	}
 	
-	
-	public void setPhone(String phone){
+	public void setphoneTextbox(String phone){
 		phoneTextbox.clear();
 		phoneTextbox.sendKeys(phone);
 	}
 	
-	public String getPhone(){
-   
-		return phoneTextbox.getAttribute("value");
-	}
-	public void setMobile(String mobile){
+	public void setmobileTextbox(String mobile){
 		mobileTextbox.clear();
 		mobileTextbox.sendKeys(mobile);
 	}
 	
-	public String getMobile(){
-   
-		return mobileTextbox.getAttribute("value");
-	}
 	
-	public void setAlias(String alias){
+	public void setaliasTextbox(String alias){
 		aliasTextbox.clear();
 		aliasTextbox.sendKeys(alias);
 	}
-	
-	public String getAlias(){
-   
-		return aliasTextbox.getAttribute("value");
-	}
-
 	
 	public void accountDetail(String email){
 		setEmail(email);
@@ -345,8 +235,8 @@ JavascriptExecutor js ;
 			}
 		}
 		setCustFirstName(custfirstnm);
-		setCustLastName(custlastnm);
-		setPwd(pwd);
+		setcustlastTextbox(custlastnm);
+		setpaswrdTextbox(pwd);
 		//setDay(day);
 		 Select day_selection = new Select(dayDrpdwn);
 		 day_selection.selectByValue(day);
@@ -362,12 +252,12 @@ JavascriptExecutor js ;
 		//setYear(yr);
 		  js = (JavascriptExecutor) driver;
 		  js.executeScript("window.scrollBy(0,250)", ""); //scroll down
-		setFrstName(fname);
-		setLastName(lname);
-		setCmpny(cmpny);
-		setAddress(address);
-		setAddress2(address2);
-		setCity(city);
+		setfirstnameTextbox(fname);
+		setlastnameTextbox(lname);
+		setcmpnyTextbox(cmpny);
+		setaddressTextbox(address);
+		setaddress2Textbox(address2);
+		setcityTextbox(city);
 		 Select cntry_selection = new Select(cntryDrpdwn);
 		    
 		 cntry_selection.selectByVisibleText(cntry);
@@ -377,13 +267,13 @@ JavascriptExecutor js ;
 		   stata_selection.selectByVisibleText(state);
 		   
 		//setState(state);
-		 setPstCode(pcode);
+		  setpostcodeTextbox(pcode);
 		  }
 		//setCntry(cntry);
-	    setOtherInfo(info);
-		setPhone(phone);
-		setMobile(mobile);
-		setAlias(alias);
+		setotherInfoTextArea(info);
+	    setphoneTextbox(phone);
+	    setmobileTextbox(mobile);
+		setaliasTextbox(alias);
 		//setRegister(reg);
 		
 	}
